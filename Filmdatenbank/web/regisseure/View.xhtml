@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="RegisseureViewDlg" widgetVar="RegisseureViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewRegisseureTitle}">
+            <h:form id="RegisseureViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{regisseureController.selected != null}">
+                        <h:outputText value="#{bundle.ViewRegisseureLabel_id}"/>
+                        <h:outputText value="#{regisseureController.selected.id}" title="#{bundle.ViewRegisseureTitle_id}"/>
+                        <h:outputText value="#{bundle.ViewRegisseureLabel_vorname}"/>
+                        <h:outputText value="#{regisseureController.selected.vorname}" title="#{bundle.ViewRegisseureTitle_vorname}"/>
+                        <h:outputText value="#{bundle.ViewRegisseureLabel_nachname}"/>
+                        <h:outputText value="#{regisseureController.selected.nachname}" title="#{bundle.ViewRegisseureTitle_nachname}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="RegisseureViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
