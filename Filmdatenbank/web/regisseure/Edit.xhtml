@@ -12,8 +12,8 @@
             <h:form id="RegisseureEditForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{regisseureController.selected != null}">
-                        <p:outputLabel value="#{bundle.EditRegisseureLabel_id}" for="id" />
-                        <p:inputText id="id" value="#{regisseureController.selected.id}" title="#{bundle.EditRegisseureTitle_id}" />
+                        <p:outputLabel value="#{bundle.EditRegisseureLabel_id}" for="id" rendered="false"/>
+                        <p:inputText id="id" value="#{regisseureController.selected.id}" title="#{bundle.EditRegisseureTitle_id}" rendered="false"/>
                         <p:outputLabel value="#{bundle.EditRegisseureLabel_vorname}" for="vorname" />
                         <p:inputText id="vorname" value="#{regisseureController.selected.vorname}" title="#{bundle.EditRegisseureTitle_vorname}" />
                         <p:outputLabel value="#{bundle.EditRegisseureLabel_nachname}" for="nachname" />

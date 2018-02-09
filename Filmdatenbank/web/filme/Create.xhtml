@@ -12,8 +12,8 @@
             <h:form id="FilmeCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{filmeController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateFilmeLabel_id}" for="id" />
-                        <p:inputText id="id" value="#{filmeController.selected.id}" title="#{bundle.CreateFilmeTitle_id}" />
+                        <p:outputLabel value="#{bundle.CreateFilmeLabel_id}" for="id" rendered="false"/>
+                        <p:inputText id="id" value="#{filmeController.selected.id}" title="#{bundle.CreateFilmeTitle_id}" rendered="false"/>
                         <p:outputLabel value="#{bundle.CreateFilmeLabel_name}" for="name" />
                         <p:inputText id="name" value="#{filmeController.selected.name}" title="#{bundle.CreateFilmeTitle_name}" />
                         <p:outputLabel value="#{bundle.CreateFilmeLabel_jahr}" for="jahr" />

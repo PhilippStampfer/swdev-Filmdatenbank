@@ -11,9 +11,9 @@
         <p:dialog id="FilmeEditDlg" widgetVar="FilmeEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditFilmeTitle}">
             <h:form id="FilmeEditForm">
                 <h:panelGroup id="display">
-                    <p:panelGrid columns="2" rendered="#{filmeController.selected != null}">
-                        <p:outputLabel value="#{bundle.EditFilmeLabel_id}" for="id" />
-                        <p:inputText id="id" value="#{filmeController.selected.id}" title="#{bundle.EditFilmeTitle_id}" />
+                    <p:panelGrid columns="2" rendered="#{filmeController.selected != null}" >
+                        <p:outputLabel value="#{bundle.EditFilmeLabel_id}" for="id"  rendered="false"/>
+                        <p:inputText id="id" value="#{filmeController.selected.id}" title="#{bundle.EditFilmeTitle_id}" rendered="false"/>
                         <p:outputLabel value="#{bundle.EditFilmeLabel_name}" for="name" />
                         <p:inputText id="name" value="#{filmeController.selected.name}" title="#{bundle.EditFilmeTitle_name}" />
                         <p:outputLabel value="#{bundle.EditFilmeLabel_jahr}" for="jahr" />

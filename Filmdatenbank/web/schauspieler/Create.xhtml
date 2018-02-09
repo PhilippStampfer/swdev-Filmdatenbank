@@ -12,8 +12,8 @@
             <h:form id="SchauspielerCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{schauspielerController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateSchauspielerLabel_id}" for="id" />
-                        <p:inputText id="id" value="#{schauspielerController.selected.id}" title="#{bundle.CreateSchauspielerTitle_id}" />
+                        <p:outputLabel value="#{bundle.CreateSchauspielerLabel_id}" for="id" rendered="false"/>
+                        <p:inputText id="id" value="#{schauspielerController.selected.id}" title="#{bundle.CreateSchauspielerTitle_id}" rendered="false"/>
                         <p:outputLabel value="#{bundle.CreateSchauspielerLabel_vorname}" for="vorname" />
                         <p:inputText id="vorname" value="#{schauspielerController.selected.vorname}" title="#{bundle.CreateSchauspielerTitle_vorname}" />
                         <p:outputLabel value="#{bundle.CreateSchauspielerLabel_nachname}" for="nachname" />

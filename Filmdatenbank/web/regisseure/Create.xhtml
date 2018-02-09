@@ -12,8 +12,8 @@
             <h:form id="RegisseureCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{regisseureController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateRegisseureLabel_id}" for="id" />
-                        <p:inputText id="id" value="#{regisseureController.selected.id}" title="#{bundle.CreateRegisseureTitle_id}" />
+                        <p:outputLabel value="#{bundle.CreateRegisseureLabel_id}" for="id" rendered="false"/>
+                        <p:inputText id="id" value="#{regisseureController.selected.id}" title="#{bundle.CreateRegisseureTitle_id}" rendered="false"/>
                         <p:outputLabel value="#{bundle.CreateRegisseureLabel_vorname}" for="vorname" />
                         <p:inputText id="vorname" value="#{regisseureController.selected.vorname}" title="#{bundle.CreateRegisseureTitle_vorname}" />
                         <p:outputLabel value="#{bundle.CreateRegisseureLabel_nachname}" for="nachname" />
